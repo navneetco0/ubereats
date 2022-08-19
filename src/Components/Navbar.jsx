@@ -118,25 +118,39 @@ export const Navbar = () => {
                   There's more to love in the app
                 </Text>
               </Flex>
-              <Flex fontSize={"14px"} fontWeight="500" color={"black"} gap="15px" m={"20px 0 40px"}>
+              <Flex
+                fontSize={"14px"}
+                fontWeight="500"
+                color={"black"}
+                gap="15px"
+                m={"20px 0 40px"}
+              >
                 <Flex
-                  p="12px 16px"
+                  p="10px 16px"
                   whiteSpace={"nowrap"}
                   boxShadow="0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%)"
                   borderRadius={"500px"}
                   backgroundColor="#E2E2E2"
+                  alignItems="center"
+                  gap={"5px"}
                 >
-                  <Apple />
+                  <Box w={"16px"}>
+                    <Apple />
+                  </Box>
                   <Text>iPhone</Text>
                 </Flex>
                 <Flex
-                  p="12px 16px"
+                  p="10px 16px"
                   whiteSpace={"nowrap"}
                   boxShadow="0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%)"
                   borderRadius={"500px"}
                   backgroundColor="#E2E2E2"
+                  alignItems="center"
+                  gap={"5px"}
                 >
-                  <Android />
+                  <Box w="17px">
+                    <Android />
+                  </Box>
                   <Text>Android</Text>
                 </Flex>
               </Flex>
