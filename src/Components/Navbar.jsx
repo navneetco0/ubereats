@@ -41,6 +41,10 @@ export const Navbar = () => {
             boxShadow="0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%)"
             borderRadius="500px"
             bg={"white"}
+            cursor="pointer"
+            _hover={{
+              bg:"#E2E2E2"
+            }}
           >
             <Person whiteSpace="nowrap" /> Log in
           </Flex>
@@ -51,6 +55,10 @@ export const Navbar = () => {
             borderRadius={"500px"}
             backgroundColor="#000000"
             color="white"
+            cursor="pointer"
+            _hover={{
+               bg:"#333333"
+            }}
           >
             Sign Up
           </Flex>
@@ -76,6 +84,9 @@ export const Navbar = () => {
               fontWeight={"500"}
               borderRadius={"8px"}
               mt="20px"
+              _hover={{
+                bg:"#333333"
+              }}
             >
               Sign up
             </Box>
@@ -89,6 +100,9 @@ export const Navbar = () => {
               fontWeight={"500"}
               borderRadius={"8px"}
               m="10px 0 25px"
+              _hover={{
+                bg:"#E2E2E2"
+              }}
             >
               Log in
             </Box>
@@ -100,9 +114,9 @@ export const Navbar = () => {
               color="black"
               justifyContent="space-between"
             >
-              <Text>Create a business account</Text>
-              <Text>Add your restaurant</Text>
-              <Text>sign up to deliver</Text>
+              <Text cursor={"pointer"}>Create a business account</Text>
+              <Text cursor={"pointer"}>Add your restaurant</Text>
+              <Text cursor={"pointer"}>sign up to deliver</Text>
             </Flex>
           </DrawerBody>
           <DrawerFooter>
@@ -133,6 +147,10 @@ export const Navbar = () => {
                   backgroundColor="#E2E2E2"
                   alignItems="center"
                   gap={"5px"}
+                  _hover={{
+                    bg:"#E2E2E2",
+                    cursor:"pointer"
+                  }}
                 >
                   <Box w={"16px"}>
                     <Apple />
@@ -147,6 +165,10 @@ export const Navbar = () => {
                   backgroundColor="#E2E2E2"
                   alignItems="center"
                   gap={"5px"}
+                  _hover={{
+                    bg:"#E2E2E2",
+                    cursor:'pointer'
+                  }}
                 >
                   <Box w="17px">
                     <Android />
