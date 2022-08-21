@@ -2,13 +2,14 @@ import { Text, Flex, Button, Square } from "@chakra-ui/react";
 import { Bottom } from "../Assets/SVGs/Bottom";
 import { Timer } from "../Assets/SVGs/Timer";
 import { SearchDiv } from "./SearchDiv";
-
+import { useNavigate } from "react-router-dom"
 export const HomeSearch = () => {
+  const navigate = useNavigate();
   return (
     <Flex
       direction={"column"}
       w={"100%"}
-      h="100vh"
+      minHeight="100vh"
       backgroundColor="#f9c810"
       backgroundImage={
         "uri(https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/9b21aa66b4922ae2.png)"
@@ -20,7 +21,7 @@ export const HomeSearch = () => {
         Order food to your door
       </Text>
 
-      <Flex direction={"row"} gap="10px">
+      <Flex direction={"row"} gap="10px" w="70%">
         <SearchDiv />
         <Flex
           direction={"row"}
@@ -54,7 +55,7 @@ export const HomeSearch = () => {
         </Button>
       </Flex>
       <Flex fontSize="14px" fontWeight="500" gap="5px" mt="20px">
-        <Text textDecoration="underline" cursor="pointer" >Sign In </Text> {" "}
+        <Text textDecoration="underline" cursor="pointer" onClick={()=>navigate('/email')} >Sign In </Text> {" "}
         <Text> for your recent address</Text>
       </Flex>
     </Flex>

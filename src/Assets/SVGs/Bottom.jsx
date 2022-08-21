@@ -1,4 +1,4 @@
-export const Bottom = () => {
+export const Bottom = ({color}) => {
   return (
     <svg
       width="24px"
@@ -11,7 +11,7 @@ export const Bottom = () => {
     >
       <path
         d="M17 11.7494V14.916L12 11.0827L7 14.916V11.7494L12 7.91602L17 11.7494Z"
-        fill="#000000"
+        fill={color?color:"#000000"}
         transform="rotate(180, 12, 12)"
       ></path>
     </svg>

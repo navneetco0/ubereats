@@ -13,9 +13,11 @@ import {
 import { useRef } from "react";
 import { Apple } from "../Assets/SVGs/Apple";
 import { Android } from "../Assets/SVGs/Android";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
   const btnRef = useRef();
   return (
     <>
@@ -45,6 +47,7 @@ export const Navbar = () => {
             _hover={{
               bg:"#E2E2E2"
             }}
+            onClick={()=>navigate('/email')}
           >
             <Person whiteSpace="nowrap" /> Log in
           </Flex>
@@ -59,6 +62,7 @@ export const Navbar = () => {
             _hover={{
                bg:"#333333"
             }}
+            onClick={()=>navigate('/email')}
           >
             Sign Up
           </Flex>
@@ -87,6 +91,7 @@ export const Navbar = () => {
               _hover={{
                 bg:"#333333"
               }}
+              onClick={()=>navigate('/email')}
             >
               Sign up
             </Box>
@@ -103,6 +108,7 @@ export const Navbar = () => {
               _hover={{
                 bg:"#E2E2E2"
               }}
+              onClick={()=>navigate('/email')}
             >
               Log in
             </Box>
@@ -114,8 +120,8 @@ export const Navbar = () => {
               color="black"
               justifyContent="space-between"
             >
-              <Text cursor={"pointer"}>Create a business account</Text>
-              <Text cursor={"pointer"}>Add your restaurant</Text>
+              <Text cursor={"pointer"} onClick={()=>navigate('/create-bussiness-account')}>Create a business account</Text>
+              <Text cursor={"pointer"} onClick={()=>navigate('/merchant')}>Add your restaurant</Text>
               <Text cursor={"pointer"}>sign up to deliver</Text>
             </Flex>
           </DrawerBody>
