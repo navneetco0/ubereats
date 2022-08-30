@@ -49,6 +49,7 @@ export const HomeSearch = () => {
           _hover={{
             bg: "#333333",
           }}
+          onClick={()=>navigate('/food')}
         >
           {" "}
           Find Food{" "}

@@ -14,9 +14,12 @@ import { useRef } from "react";
 import { Apple } from "../Assets/SVGs/Apple";
 import { Android } from "../Assets/SVGs/Android";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export const Navbar = () => {
+export const Navbar = ({cart}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const {total}  = useSelector(store=>store.cart)
+  // console.log(amount)
   const navigate = useNavigate();
   const btnRef = useRef();
   return (
@@ -36,6 +39,19 @@ export const Navbar = () => {
         </Box>
         <Spacer />
         <Flex gap={"20px"} fontSize="16px" fontWeight={"500"} h="fit-content">
+          <Flex whiteSpace="nowrap"
+            gap={"5px"}
+            p="12px 16px"
+            boxShadow="0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%)"
+            borderRadius="500px"
+            bg={"white"}
+            cursor="pointer"
+            _hover={{
+              bg:"#E2E2E2"
+            }}
+            >
+            Cart - {total}
+          </Flex>
           <Flex
             whiteSpace="nowrap"
             gap={"5px"}
