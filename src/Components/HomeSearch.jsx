@@ -11,12 +11,15 @@ export const HomeSearch = () => {
       w={"100%"}
       minHeight="100vh"
       backgroundColor="#f9c810"
-      backgroundImage={
-        "uri(https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/9b21aa66b4922ae2.png)"
-      }
+      backgroundImage= "url(https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/e6b11dc56fb50db03a2e1370a9a7bba5.svg), url(https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/7fc854e8448107a55583d296c2155d8b.svg)"
+      backgroundPosition= 'left top, right top'
+      backgroundRepeat={'no-repeat, no-repeat'}
       justifyContent="center"
       p={"40px"}
     >
+
+
+
       <Text fontSize={"52px"} fontWeight="700" m={"40px 0"}>
         Order food to your door
       </Text>
