@@ -30,6 +30,8 @@ export const Navbar = ({cart}) => {
         alignItems={"center"}
         position="fixed"
         width={"100%"}
+        background="white"
+        boxShadow={'rgb(226 226 226) 0px -2px 0px inset'}
       >
         <Box mr={"2.5%"} cursor={"pointer"} onClick={onOpen}>
           <Menu />
